@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { 
-    createBrowserRouter,
+    createHashRouter,
     createRoutesFromElements,
     Navigate,
     Route,
@@ -14,7 +14,7 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import Cart from './Components/Cart';
 
 
-const router = createBrowserRouter(
+const router = createHashRouter(
     createRoutesFromElements(
         <>
             <Route  path="/" element= {<Navigate to = { localStorage.user1 ? "books" : "signin" } />} />               
